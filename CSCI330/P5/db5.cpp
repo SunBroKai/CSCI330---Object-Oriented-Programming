@@ -23,7 +23,7 @@ CreatureDB::CreatureDB * CreatureDB::GetDB()
     if(not db_instance){
         db_instance = new CreatureDB;
     }
-	return db_instance;
+    return db_instance;
 }
 
 void CreatureDB::DeleteDB()
@@ -38,7 +38,7 @@ void CreatureDB::DeleteDB()
 
 bool CreatureDB::LoadDB(istream& inFile)
 {
-	char type;
+    char type;
     char voc;
     char trash;
     string name;
@@ -48,7 +48,6 @@ bool CreatureDB::LoadDB(istream& inFile)
 
     inFile.get(type);
     while(not inFile.eof()){
-        //inFile.get(type);
         if(inFile){
             inFile >> trash;
             if(type == 'H' or type == 'E' or type == 'F' or type == 'O'){
